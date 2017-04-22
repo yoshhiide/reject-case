@@ -1,4 +1,6 @@
 # RejectCase
+[![NPM](https://nodei.co/npm/reject-case.svg.png)](https://nodei.co/npm/reject-case.svg/)  
+  
 Promise.reject controller.
 
 ### Installation
