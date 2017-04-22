@@ -14,7 +14,7 @@ const promiseReject = () => {
 };
 
 const promiseError = () => {
-  return Reject.error('output message to log & trace.\n00000');
+  return Reject.error('output message to log & trace.');
 };
 
 const promiseBug = () => {
