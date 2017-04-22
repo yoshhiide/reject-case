@@ -76,3 +76,6 @@ promiseCallback3()
   .catch((err) => RejectCase(err))
   .then((result) => console.log(result));
 ```
+
+### LICENSE
+MIT

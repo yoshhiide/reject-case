@@ -1,6 +1,6 @@
 {
   "name": "reject-case",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "reject case controller",
   "main": "./lib/reject-case",
   "scripts": {
