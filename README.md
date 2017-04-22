@@ -77,5 +77,26 @@ promiseCallback3()
   .then((result) => console.log(result));
 ```
 
+other case  
+
+```js
+const { Reject, RejectCase } = require('reject-case');
+
+let cnt = 0;
+const setTime = (resolve) => setTimeout(() => resolve('setTime' + ++cnt), 500);
+const setTime1 = () => new Promise((resolve) => setTime(resolve));
+
+async function main() {
+  await Reject.notice('first await');
+  await setTime1();
+  await setTime1();
+  return setTime1();
+}
+
+main()
+  .then((msg) => console.log(msg))
+  .catch((err) => RejectCase(err));
+```
+
 ### LICENSE
 MIT
