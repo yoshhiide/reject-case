@@ -1,7 +1,7 @@
 'use strict';
 
-//const { Reject, RejectCase } = require('reject-case');
-const { Reject, RejectCase } = require('./lib/reject-case');
+const { Reject, RejectCase } = require('reject-case');
+
 
 const promiseReject = () => {
   return Promise.reject('usual reject.');
@@ -87,3 +87,24 @@ async function main() {
 main()
   .then((msg) => console.log(msg))
   .catch((err) => RejectCase(err));
+
+
+// add tag
+
+promiseReject()
+  .catch((err) => RejectCase({ tag: 'CASE1', err }));
+
+promiseError()
+  .catch((err) => RejectCase({ tag: 'CASE2', err }));
+
+promiseBug()
+  .catch((err) => RejectCase({ tag: 'CASE3', err }));
+
+promiseNotice()
+  .catch((err) => RejectCase({ tag: 'CASE4', err }));
+
+promiseNormal1()
+  .catch((err) => RejectCase({ tag: 'CASE5', err }));
+
+promiseNormal2()
+  .catch((err) => RejectCase({ tag: 'CASE6', err }));
