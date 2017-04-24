@@ -99,5 +99,28 @@ main()
   .catch((err) => RejectCase(err));
 ```
 
+add tag
+
+
+```js
+promiseReject()
+  .catch((err) => RejectCase({ tag: 'CASE1', err }));
+
+promiseError()
+  .catch((err) => RejectCase({ tag: 'CASE2', err }));
+
+promiseBug()
+  .catch((err) => RejectCase({ tag: 'CASE3', err }));
+
+promiseNotice()
+  .catch((err) => RejectCase({ tag: 'CASE4', err }));
+
+promiseNormal1()
+  .catch((err) => RejectCase({ tag: 'CASE5', err }));
+
+promiseNormal2()
+  .catch((err) => RejectCase({ tag: 'CASE6', err }));
+```
+
 ### LICENSE
 MIT
